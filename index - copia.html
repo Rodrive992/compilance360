@@ -7,7 +7,7 @@
     <title>Compliance 360 VG - Seguridad Informática</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <style>
         :root {
             --primary: #18298C;
@@ -67,29 +67,27 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
         }
 
+        /* Estilos para el logo */
+        .logo img {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo:hover img {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(24, 41, 140, 0.5);
+        }
+
         /* Ajustes para el header */
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-            height: 90px;
+            height: 120px;
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            min-height: 120px;
-            /* Altura mínima mayor para acomodar el logo */
-            display: flex;
-            align-items: center;
         }
-
-        /* Asegurar que el nav se alinee correctamente */
-        nav {
-            margin-left: auto;
-            /* Empuja el nav a la derecha */
-        }
-
-
-
 
         nav a:after {
             content: '';
@@ -267,39 +265,28 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        /* Estilos ajustados para el logo */
-        .logo img {
-            height: 140px;
-            /* Tamaño deseado */
-            width: auto;
-            transition: transform 0.3s ease;
-            object-fit: contain;
-        }
-
-        .logo:hover img {
-            transform: scale(1.05);
-        }
     </style>
 </head>
 
 <body class="antialiased">
 
-    <header class="bg-noise py-4">
+    <header class="bg-noise py-6">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="#" class="logo flex items-center">
-                <img src="img/logo1.png" alt="Logo Compliance 360 VG" class="h-12">
+                <!-- Logo cuadrado sin bordes -->
+                <img src="img/logo.jpeg" alt="Logo Compliance 360 VG"
+                    class="w-64 h-16 md:w-52 md:h-20  shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg">
             </a>
 
-            <nav class="hidden md:flex space-x-8 items-center ml-auto">
+            <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#home"
-                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200 relative">Inicio</a>
+                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200">Inicio</a>
                 <a href="#services"
-                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200 relative">Servicios</a>
+                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200">Servicios</a>
                 <a href="#about"
-                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200 relative">Nosotros</a>
+                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200">Nosotros</a>
                 <a href="#contact"
-                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200 relative">Contacto</a>
+                    class="text-white hover:text-blue-200 font-medium text-sm uppercase tracking-wider py-2 transition-colors duration-200">Contacto</a>
             </nav>
 
             <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
@@ -447,9 +434,9 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                            alt="Seguridad informática"
-                            class="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-gray-700">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+     alt="Seguridad informática" 
+     class="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-gray-700">
                         <div
                             class="absolute -inset-4 border-2 border-blue-400 rounded-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none">
                         </div>
@@ -557,7 +544,7 @@
                             </div>
                             <div class="ml-3">
                                 <p class="text-gray-300 font-medium">Correo electrónico</p>
-                                <p class="text-blue-400">compliance360.vg@gmail.com</p>
+                                <p class="text-blue-400">info@compliance360vg.com</p>
                             </div>
                         </div>
 
@@ -571,7 +558,7 @@
                             </div>
                             <div class="ml-3">
                                 <p class="text-gray-300 font-medium">Teléfono</p>
-                                <p class="text-blue-400">+54 3572532119</p>
+                                <p class="text-blue-400">+1 (123) 456-7890</p>
                             </div>
                         </div>
 
@@ -587,7 +574,7 @@
                             </div>
                             <div class="ml-3">
                                 <p class="text-gray-300 font-medium">Oficina principal</p>
-                                <p class="text-blue-400">Ovidio lagos 409, Córdoba, Argentina</p>
+                                <p class="text-blue-400">Av. Principal 1234, Ciudad, País</p>
                             </div>
                         </div>
                     </div>
@@ -598,7 +585,7 @@
 
                     <form id="contact-form" action="https://formspree.io/f/xrbkoyjj" method="POST" class="space-y-6">
                         <input type="hidden" name="_subject" value="Nuevo mensaje desde Compliance 360 VG">
-                        <input type="hidden" name="_cc" value="maxi.varela26@gmail.com,fergentili10@gmail.com">
+                        <!--<input type="hidden" name="_cc" value="maxi.varela26@gmail.com">-->
                         <input type="text" name="_gotcha" style="display:none">
 
                         <div class="grid md:grid-cols-2 gap-6">
@@ -660,19 +647,16 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer class="bg-gradient-dark text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="img/logo1.png" alt="Logo Compliance 360 VG" class="h-24">
-                        <!-- Cambiado de h-12 a h-24 -->
-                        <span class="text-xl font-bold ml-4">Compliance 360 VG</span> <!-- Añadido ml-4 para margen -->
+                        <img src="img/logo.jpeg" alt="Logo" class="w-26 h-16 rounded mr-3">
+                        <span class="text-xl font-bold">Compliance 360 VG</span>
                     </div>
-                    <p class="text-gray-300 text-sm mt-2"> <!-- Añadido mt-2 para separación -->
-                        Expertos en seguridad de la información y cumplimiento normativo.
+                    <p class="text-gray-300 text-sm">Expertos en seguridad de la información y cumplimiento normativo.
                     </p>
                 </div>
 
@@ -686,7 +670,7 @@
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                                 </path>
                             </svg>
-                            <span>compliance360.vg@gmail.com</span>
+                            <span>info@compliance360vg.com</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-4 h-4 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
@@ -695,7 +679,7 @@
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
                                 </path>
                             </svg>
-                            <span>+54 3572532119</span>
+                            <span>+1 (123) 456-7890</span>
                         </li>
                     </ul>
                 </div>
